@@ -18,7 +18,7 @@ class Main {
     while (!"n".equals(repeat)) {
 
       Scanner input = new Scanner(System.in);
-      System.out.print("Please enter a new radio (duplicates are for testing):");
+      System.out.print("Please enter a new radio:");
       String newRadio = input.next();
     
       if (radios.add(newRadio)) {
