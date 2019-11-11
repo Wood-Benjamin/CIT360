@@ -38,7 +38,6 @@ public class Myhttpurlconnection {
             System.out.println(sb.toString());
         } catch (Exception e) {
             System.out.println("Sorry, something went wrong.");
-        } finally {
             System.out.println("Check your server connection or try back later.");
         }
     }
