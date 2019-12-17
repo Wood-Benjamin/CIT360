@@ -1,10 +1,13 @@
 package MyCollections;
+//sited works: docs.oracle.com
 import java.util.*;
 
 public class mycollections {
     public static void main(String[] args) {
         System.out.println("======================");
         System.out.println("========Vector========" +"\n");
+        //Vector is synchronized, meaning only one thread at a time can access the code.
+        //Vector is also a growable array of objects.
         Vector vradio = new Vector();
         System.out.println("Radio capacity is " + vradio.capacity() +"\n");
         vradio.addElement("SD4");
@@ -38,12 +41,14 @@ public class mycollections {
         ///////////////////////////////////////////////////////////////
         System.out.println("======================");
         System.out.println("======LinkedList======" +"\n");
+        //elements are linked to their index.  Note: Index starts with 0, ie. [0][1][2].
+        //in the example above the number "2" is the third element, but index assignment of 2.
         LinkedList<String> llradio = new LinkedList<String>();
         llradio.add("SD4");
         llradio.add("SD9");
         llradio.add("MDS9710");
         llradio.add("MDS9810");
-        System.out.println("Beginning Linked List: " +"\n");
+        System.out.println("Start Linked List: " +"\n");
         System.out.println(llradio +"\n");
         llradio.add(2,"MDS4710");
         System.out.println("New addition, 'MDS4710' as the 3rd element"+"\n");
@@ -152,6 +157,29 @@ public class mycollections {
         for (Map.Entry<String,Integer> out:mas_radios ) {
             System.out.println(out.getKey() + ":" + out.getValue());
         }
+        ///////////////////////////////////////////////////////////////
+        System.out.println("\n"+"=====================");
+        System.out.println("========Queue========" +"\n");
+        //This queue is a typical first-in-last-out order method.
+        //Queues are designed for holding elements prior to processing.
+        Queue<String> queue_radio = new LinkedList<>();
+        queue_radio.add("SD9");
+        queue_radio.add("SD4");
+        queue_radio.add("Freewave");
+        queue_radio.add("Xetawave");
+        System.out.println(queue_radio +"\n");
+
+        queue_radio.add("Cambium");
+        System.out.println("The 'add' places the new radio at the end of the queue.\n");
+        System.out.println(queue_radio +"\n");
+        queue_radio.remove();
+        System.out.println("The 'remove' deletes the first in the queue.\n");
+        System.out.println(queue_radio +"\n");
+        System.out.println(queue_radio.size() +"\n");
+        System.out.println("The 'size' shows the number of elements in the queue.\n");
+        System.out.println(queue_radio +"\n");
+        System.out.println(queue_radio.peek() +"\n");
+        System.out.println("The 'peek' shows the first element in the queue.\n");
         ///////////////////////////////////////////////////////////////
         System.out.println("\n"+"=====================");
 
