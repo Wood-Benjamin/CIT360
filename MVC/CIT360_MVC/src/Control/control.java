@@ -20,7 +20,7 @@ public class control {
                 myView.setCalSolution(myModel.getCalValue());
             } catch (NumberFormatException ex) {
                 System.out.println(ex);
-                myView.displayErrorMessage("Requires 2 Integers (i.e., '1' or '2')");
+                myView.ErrorMessage("Requires 2 Integers (i.e., '1' or '2')");
             }
         }
     }
@@ -29,6 +29,5 @@ public class control {
             this.myView = myView;
             this.myModel = myModel;
             this.myView.addCalListener(new CalListener());
-
         }
 }

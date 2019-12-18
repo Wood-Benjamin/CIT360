@@ -31,10 +31,10 @@ public class view extends JFrame{
     public void setCalSolution(int solution){
         calSolution.setText(Integer.toString(solution));
     }
-    public void addCalListener(ActionListener listenForCalcButton){
-        calButton.addActionListener(listenForCalcButton);
+    public void addCalListener(ActionListener Button){
+        calButton.addActionListener(Button);
     }
-    public void displayErrorMessage(String errorMessage){
+    public void ErrorMessage(String errorMessage){
         JOptionPane.showMessageDialog(this, errorMessage);
     }
 }
